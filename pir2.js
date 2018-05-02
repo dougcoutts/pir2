@@ -6,7 +6,7 @@ sensor.watch(function (err, value) { //#B
   if (err) exit(err);
   console.log(value ? 'there is someone!' : 'not anymore!');
   led.write(value, function() { //#E
-    console.log( value ? 'the LED is on' : 'the LED is off');
+    console.log( value ? 'LED on' : 'LED off');
   });
 });
 

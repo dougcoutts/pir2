@@ -1,5 +1,5 @@
 var moment = require('moment'),
- Gpio = require('onoff').Gpio,
+  Gpio = require('onoff').Gpio,
   sensor = new Gpio(17, 'in', 'both'),
   led = new Gpio(4, 'out');    //#A
 

@@ -1,0 +1,29 @@
+{
+  "name": "pir2",
+  "version": "1.0.0",
+  "description": "PIR detector prototype",
+  "main": "pir2.js",
+  "dependencies": {
+    "moment":"^2"
+  },
+  "devDependencies": {
+    "eslint": "^4",
+    "eslint-watch": "^3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dougcoutts/pir2.git"
+  },
+  "keywords": [
+    "raspberry"
+  ],
+  "author": "Douglas Coutts",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dougcoutts/pir2/issues"
+  },
+  "homepage": "https://github.com/dougcoutts/pir2#readme"
+}

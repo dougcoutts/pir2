@@ -1,16 +1,18 @@
 var moment = require('moment'),
   Gpio = require('onoff').Gpio,
   sensor = new Gpio(17, 'in', 'both'),
-  led = new Gpio(4, 'out');    //#A
+  led = new Gpio(4, 'out'),
+  eventTime = moment().format();    //#A
 
 
-console.log(moment().format('LLLL'));  // Start up date & time
+console.log('Start up at: ' + eventTime);  // Start up date & time
 
 sensor.watch(function (err, value) { //#B
   if (err) exit(err);
   console.log(value ? 'there is someone!' : 'not anymore!');
   led.write(value, function() { //#E
-    console.log( value ? 'LED on' : 'LED off');
+    eventTime = moment().format();
+    console.log( value ? 'LED on: ' + eventTime : 'LED off: ' + eventTime);
   });
 });
 
